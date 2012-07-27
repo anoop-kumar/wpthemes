@@ -1,0 +1,9 @@
+/* Education theme option CSS  */
+.row { width: 100%; overflow: hidden; margin: 15px 5px; }
+.columntitle { width: 150px; float: left; }
+.columntext { width: 300px; float: left; }
+.columnthumb { width: 400px; float: left; }
+.columnthumb label { width: 150px; float: left; margin: 5px 10px;  }
+.columnlabel { width: 200px; float: left; padding: 4px 5px; color: #AAA; font-size: 11px;}
+.columnmultitext {   width:200px; float: left; margin: 0 10px 0 0; font-size: 11px; color: #666; }
+.columnmultitext input[type="text"] { width: 200px; }
