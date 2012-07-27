@@ -1,0 +1,1297 @@
+/*
+Theme Name: Education 
+Theme URI: http://thedesignmag.com/category/wordpress
+Author: The Design Mag Theme
+Author URI: http://thedesignmag.com
+Description: Simple minimalist responsive two column theme with built in slider. Suitable for a blog-based website with custom menu, custom header, custom widget, social share button (facebook like, twitter share, google +1) to make your blog more dazzling. Education comes with amazing image attachment gallery, featured image, theme option, sticky post support, styles for print and for the admin editor. HTML 5, CSS 3, and responsive technology.
+Version: 1.4
+License: GNU General Public License
+License URI: license.txt
+Tags: light, white, two-columns, left-sidebar, flexible-width, microformats, custom-header, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments
+*/
+
+/* CSS Reset */
+html,body,div,span,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,address,cite,code,del,dfn,em,
+img,ins,q,small,strong,sub,sup,dl,dt,
+dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td{
+	border:0;
+	margin:0;
+	padding:0
+}
+article,aside,figure,figure img,figcaption,
+hgroup,footer,header,nav,section,video,object{
+	display:block
+}
+a img{
+	border:0
+}
+figure{
+	position:relative
+}
+figure img{
+	width:100%
+} 
+audio, canvas, video { 
+	display: inline-block; 
+	*display: inline; 
+	*zoom: 1; 
+}
+audio:not([controls]) { 
+	display: none; 
+}
+[hidden] { 
+	display: none;
+}
+
+/* =============================================================================
+   Global
+   ========================================================================== */
+html { 
+	font-size: 100%; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+}
+html, 
+button, 
+input, 
+select, 
+textarea { 
+	font-family: 'Verdana',sans-serif; 
+	color: #888; 
+}
+body {
+	margin: 0; 
+	font-size: 11px;
+	line-height: 20px; 
+}
+::-moz-selection { 
+	background: #8fc73e;
+	color: #fff; 
+	text-shadow: none; 
+}
+::selection { 
+	background: #8fc73e; 
+	color: #fff; 
+	text-shadow: none; 
+}
+
+.chromeframe { 
+	margin: 0.2em 0; 
+	background: #FF3300; 
+	color: #FFF; 
+	padding: 10px 0; 
+}
+
+.chromeframe a { 
+	color: #FFF; 
+	border-bottom: 1px solid #FFF; 
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+a { 
+	color: #000; 
+	text-decoration: none;
+}
+a:visited { 
+	color: #8fc73e; 
+}
+a:hover { 
+	color: #f5c421; 
+}
+a:focus { 
+	outline: thin dotted; 
+}
+a:hover, 
+a:active { 
+	outline: 0; 
+}
+
+/* =============================================================================
+   Headings
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5 { 
+	color: #333; 
+	font-family: 'Lato',sans-serif; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	font-weight: 400; 
+	line-height: 110% 
+}
+h1 {
+	font-size: 20px;
+	color: #333;
+	margin: 10px 0;
+}
+h2 {
+	font-size: 16px;
+	color: #333;
+	margin: 10px 0;
+}
+h3 {
+	font-size: 13px;
+	color: #333;
+	/*background: url(images/dot-border.jpg) repeat-x bottom;*/
+	border-bottom:#CCC 1px solid;
+	padding: 0 0 7.5px 0;
+	margin: 5px 0;
+} 
+h4, 
+h5, 
+h6 { 
+	font-size: 11px; 
+	line-height: 200%;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+address { 
+	display: block; 
+	margin: 10px 0; 
+	font-style: normal; 
+	color: #666; 
+}
+abbr[title] { 
+	border-bottom: 1px dotted; 
+}
+b, 
+strong { 
+	font-weight: bold; 
+}
+blockquote { 
+	margin: 1em 40px; 
+	font-size: 13px; 
+	font-family: Georgia, serif; 
+	font-style: italic; 
+}
+cite { 
+	color: #666; 
+	font-size: 12px; 
+	font-weight: 400; 
+	letter-spacing: 0.05em; 
+	text-transform: uppercase;
+	font-style: normal;  
+}
+dfn { 
+	font-style: italic; 
+}
+hr { 
+	display: block;
+	height: 1px; 
+	border: 0; 
+	border-top: 1px solid #ccc; 
+	margin: 1em 0; 
+	padding: 0;
+}
+ins { 
+	background: #ff9; 
+	color: #000; 
+	text-decoration: none; 
+}
+mark { 
+	background: #ff0; 
+	color: #000; 
+	font-style: italic; 
+	font-weight: bold; 
+}
+pre, 
+code, 
+kbd, 
+samp { 
+	font-family: monospace, monospace; _font-family: 'courier new', monospace; 
+	font-size: 1em; 
+}
+pre { 
+	white-space: pre; 
+	white-space: pre-wrap; 
+	word-wrap: break-word; 
+}
+p { 
+	padding: 0 0 20px 0; 
+	margin: 0; 
+}
+q {
+	quotes: none; 
+}
+q:before, q:after { 
+	content: ""; 
+	content: none; 
+}
+small { 
+	font-size: 85%; 
+}
+sub, 
+sup { 
+	font-size: 75%; 
+	line-height: 0; 
+	position: relative; 
+	vertical-align: baseline; 
+}
+sup { 
+	top: -0.5em; 
+}
+sub { 
+	bottom: -0.25em; 
+}
+
+/* =============================================================================
+   List
+   ========================================================================== */
+ul { 
+	list-style: square ; 
+}
+ol ol { 
+	list-style: upper-alpha; 
+}
+ol ol ol { 
+	list-style: lower-alpha; 
+}
+ul, 
+ol { 
+	margin: 1em 0; 
+	padding: 0 0 0 20px;
+}
+dl.gallery-item { 
+	margin: 0;
+}
+dt { 
+	color: #000; 
+}
+dd { 
+	margin: 0 0 15px 10px;
+}
+nav ul, 
+nav ol { 
+	list-style: none; 
+	list-style-image: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+/* =============================================================================
+   Form, button
+   ========================================================================== */
+form { 
+	margin: 0; 
+}
+fieldset { 
+	border: 0;
+	margin: 0; 
+	padding: 0; 
+}
+label { 
+	cursor: pointer; 
+}
+legend { 
+	border: 0; 
+	*margin-left: -7px; 
+	padding: 0; 
+	white-space: normal; 
+}
+button, 
+input, 
+select, 
+textarea { 
+	font-size: 100%; 
+	margin: 0; 
+	vertical-align: baseline; *vertical-align: middle; 
+}
+button, 
+input { 
+	line-height: normal; 
+	border: 1px solid #c3c3c3; 
+	padding: 3px;  
+}
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+	cursor: pointer; 
+	-webkit-appearance: button; 
+	*overflow: visible; 
+}
+button[disabled], 
+input[disabled] { 
+	cursor: default; 
+}
+input[type="checkbox"], 
+input[type="radio"] { 
+	box-sizing: border-box; 
+	padding: 0; 
+	*width: 13px; 
+	*height: 13px; 
+}
+input[type="search"] { 
+	-webkit-appearance: textfield; 
+	-moz-box-sizing: content-box; 
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box; 
+}
+input[type="search"]::-webkit-search-decoration, 
+input[type="search"]::-webkit-search-cancel-button { 
+	-webkit-appearance: none; 
+}
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; 
+}
+textarea { 
+	overflow: auto; 
+	vertical-align: top; 
+	resize: vertical; 
+}
+input:valid, 
+textarea:valid {}
+input:invalid, 
+textarea:invalid { 
+	background-color: #f0dddd; 
+}
+
+/* =============================================================================
+   Table
+   ========================================================================== */
+table { 
+	border-collapse: collapse; 
+	border-spacing: 0; 
+}
+.entry-content table { 
+	border-bottom: margin: 0 0 15px ; 
+	width: 100%; 
+}
+th, 
+td { 
+	text-align: left;  
+}
+td { 
+	vertical-align: top; 
+	border-top: 1px solid #DDD; 
+	padding: 5px 10px 5px 0; 
+}
+th { 
+	font-weight: 400; 
+	font-size: 13px; 
+	color: #666; 
+	text-transform: uppercase; 
+}
+
+/* =============================================================================
+   WordPress generated css
+   ========================================================================== */
+.page-link{ 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400;  
+	text-transform: uppercase; 
+	color: #AAA; 
+	letter-spacing: 5px; 
+	margin: 10px 0; 
+}
+.page-link span { 
+	letter-spacing: 1px; 
+}
+.wp-caption {
+	max-width: 96%;
+}
+.wp-caption-text, 
+.gallery-caption { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400;  
+	text-transform: uppercase; 
+	color: #AAA; 
+	letter-spacing: 1px;  
+	margin: 0 5px 5px 5px; 
+	text-align: center; 
+}
+.bypostauthor {}
+.sticky {}
+article.sticky  .sticky-label{ 
+	width: 82px; 
+	height: 83px; 
+	position: absolute; 
+	right: -5px; 
+	top: -5px; 
+	background: url(images/featured.png) no-repeat;
+}
+.alignright { 
+	display: inline; 
+	float: right; 
+	margin-left: 15px;
+}
+.alignleft { 
+	display: inline; 
+	float: left; 
+	margin-right: 15px;
+}
+.aligncenter { 
+	clear: both; 
+	display: block; 
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+/* =============================================================================
+   Images
+   ========================================================================== */
+img { 
+	border: 0; 
+	-ms-interpolation-mode: 
+	bicubic;  
+}
+svg:not(:root) { 
+	overflow: hidden; 
+}
+figure { 
+	margin: 0; 
+}
+img.size-full, 
+img.size-large { 
+	max-width: 95.5%;  
+	height: auto; 
+}
+img[class*="align"], 
+img[class*="wp-image-"]{ 
+	border: 1px dashed #DDDDDD; 
+	padding: 6px; 
+	margin: auto; 
+}
+img.alignnone { 
+	margin: 7.5px 0; 
+}
+img.alignright { 
+	display: inline; 
+	float: right; 
+	margin: 5px 0 15px 15px;
+}
+img.alignleft { 
+	display: inline; 
+	float: left; 
+	margin: 5px 15px 15px 0 ;
+}
+img.aligncenter { 
+	clear: both; 
+	display: block; 
+	margin: 10px auto; 
+}
+
+/* =============================================================================
+   Theme Backbone
+   ========================================================================== */
+.container { 
+	padding-left: 20px; 
+	padding-right: 20px; 
+}
+.row { 
+	width: 100%; 
+	max-width: 960px; 
+	min-width: 755px; 
+	margin: 0 auto; 
+	overflow: hidden;
+}
+.rowheader { 
+	width: 100%; 
+	margin: 0 auto; 
+	max-width: 960px; 
+	min-width: 755px; 
+	min-height: 50px;
+}
+.column-sidebar, 
+.column-half { 
+	margin-right: 3.8%; 
+	float: left; 
+	min-height: 1px; 
+}
+.column-content { 
+	margin-left: 3.8%; 
+	float: right; 
+	min-height: 1px; 
+}
+.row .column-sidebar { 
+	width: 30.75%; 
+}
+.row .column-half { 
+	width: 48%; 
+}
+.row .column-content {
+	width: 65.4%;
+}
+.row .column-full { 
+	width: 100%; 
+	float: left;
+}
+.nomargin { 
+	margin-right: 0px;
+}
+/* =============================================================================
+   Flexslider by Woothemes
+   ========================================================================== */
+.sliderarea { 
+	margin: 0 0 20px 0; 
+}
+.flexcontainer {
+	width: 100%; 
+	max-width: 960px; 
+	margin: 0 auto; 
+	padding: 0 0 25px 0
+}
+
+/* =============================================================================
+   Header area
+   ========================================================================== */
+.headerarea { 
+	/*margin: 50px 0 10px 0; */
+	margin:0 auto;
+	margin-bottom:10px;
+	background:#000000;
+}
+.headerarea h1 {
+	font-size: 33px; 
+	font-weight: 400; 
+	margin: 0;
+}
+.headerarea h1 a {}
+.headerarea h2 { 
+	font-size: 13px; 
+	color: #AAA;
+}
+
+#searchbox  { 
+float: right; 
+margin: 25px 0 0 0;
+}
+#searchbox  input[type="text"] { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 13px; color: #b9b9b9; 
+	letter-spacing: 1px; 	
+	float: left; 
+}
+#searchbox  input[type="text"]:focus {
+	/*border: 1px dashed #8fc73e;*/
+}
+#searchbox input[type="submit"] { 
+	
+	background: #FC5020; 	
+	border: none; 
+	padding:5px;
+	color:#FFFFFF;
+	margin-left:10px;
+	
+}
+#searchbox input[type="submit"]:hover { 
+	background: url("images/search-bg.jpg") no-repeat 0px -12px;
+}
+label.screen-reader-text { 
+	clip: rect(1px, 1px, 1px, 1px); 
+	position: absolute !important; 
+}
+
+/* =============================================================================
+   Top menu area
+   ========================================================================== */
+.topmenuarea { 
+	margin: 20px 0;  
+}
+#topmenu {
+	/*background: url(images/menu-bg.jpg) repeat-x;*/
+	border:#CCCCCC 1px solid;
+	border-left:none;
+	border-right:none;
+	padding: 5px 0 0 0; 
+	height: 43px;
+}
+#topmenu ul {}
+#topmenu ul li { 
+	float: left; 
+	position: relative; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 13px; 
+	font-weight: 400; 
+	letter-spacing: 1px;
+	text-transform: uppercase; 
+	margin: 0 30px 0 0; 
+	color: #333; 
+}
+#topmenu ul ul { 
+	display: none; 
+	float: left; 
+	position: absolute; 
+	top: 2em; 
+	left: -5px; 
+	z-index: 99999; 
+	padding: 5px 0 0 5px; 
+	margin: 14px 0 0 0; 
+	background: #fff; 
+	border: 1px dashed #c1c1c1; 
+	border-top: none; 
+}
+#topmenu ul ul ul { 
+	left: 100%; 
+	top: -20px; 
+	border: 1px dashed #c1c1c1;
+}
+#topmenu ul ul li, 
+#topmenu ul ul ul li { 
+	min-width: 130px; 
+	margin: 0; 
+	padding: 0; 
+	border: none; 
+	background: #fff; 
+}
+#topmenu u ul a { 
+	line-height: 1.5em; 
+	padding: .5em .5em .5em 1em;
+	width: 10em; 
+	height: auto;
+}
+#topmenu ul li a { 
+	text-decoration: none; 
+	color: #333; 
+	display: block; 
+	line-height: 3.1em;
+}
+#topmenu ul li:hover > ul { 
+	display: block;
+}
+#topmenu ul ul a:hover { 
+	color: #8fc73e;
+}
+#topmenu ul li:hover > a, 
+#topmenu ul ul :hover > a {
+	color: #8fc73e; 
+}
+#topmenu ul li.current_page_item a { 
+	color: #8fc73e;
+}
+#topmenu select { 
+	display: none;
+}
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+.contentarea{ 
+margin: 0 0 20px 0; 
+}
+#content { 
+	margin: 15px 0; 
+	padding: 0 0 10px 0;
+}
+
+#breadcrumbs { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 13px; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	font-weight: 400; 
+	background: url(images/dot-border.jpg) repeat-x bottom;  
+	padding: 12px 0 5px 0; 
+}
+#breadcrumbs a { 
+	color: #333; 
+}
+#breadcrumbs a:hover { 
+	color: #8fc73e; 
+}
+#breadcrumbs .current span {  
+	color: #8fc73e; 
+}
+	
+.content-box { 
+	width: 95%; 
+	border: 1px solid #EEE; 
+	padding: 10px; 
+	margin: 0; 
+	position: relative;  
+}
+.entry-date {
+	background: url(images/date-bg.png) no-repeat; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 15px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #FFF; 
+	position: absolute; 
+	top: 10px; 
+	left: -6px; 
+	padding: 2.5px 40px 10px 7.5px;
+}
+.entry-title { 
+	margin: 2px 0 10px 90px;
+}
+.entry-author { 
+	float: left; 
+	margin: 12.5px 10px 10px 0; 
+	background: url(images/author.jpg) no-repeat left center; 
+	padding: 0 0 0 25px; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA;
+}
+.entry-comments { 
+	float: left; 
+	margin: 12.5px 0 10px 0; 
+	background: url(images/comments.jpg) no-repeat left center;
+	padding: 0 0 0 25px; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA;
+}
+.entry-author a, 
+.entry-comments a { 
+	color: #AAA; 
+}
+.entry-author a:hover, 
+.entry-comments a:hover { 
+	color: #8fc73e 
+}
+.more-link {
+	width: 125px; 
+	display: block; 
+	background: #8fc73e; 
+	padding: 2.5px 15px; 
+	margin: 10px 0; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #FFF; 
+}
+.more-link :hover,
+.more-link:visited{ 
+	color: #FFF; 
+}
+.cat-links, 
+.tag-links, 
+.edit-link{ 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA;  
+}
+.content-box .post h3 { 
+	margin: 30px 0 10px 0; 
+}
+	
+.single  footer.entry-meta { 
+	margin: 10px 0 0 0; 
+}
+.single #content , 
+.archive #content, 
+.search #content { 
+	margin: 20px 0 0 0;
+	padding: 0 0 10px 0;  
+}
+.attachment #content { 
+	margin: 20px 0 0 5px; 
+}
+
+.page .entry-title, 
+.error404 .entry-title, 
+.search-no-results .entry-title{ 
+	margin: 0 0 20px 0; 
+}
+.search-results .entry-title { 
+	margin: 0 0 10px 90px; 
+}
+
+.socialshareboxsingle { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #666; 
+	margin: 10px 0 0 0; 
+}
+.socialshareboxsingle ul { 
+	list-style: none;
+}
+.socialshareboxsingle ul li { 
+	float: left;
+	margin: 0 -10px;
+ }
+.socialshareboxsingle ul li:first-child { 
+	margin: 0 -10px 0 -20px;
+}
+.attachment .socialshareboxsingle { 
+	margin: 20px 0 0 0; 
+}
+
+.pagination { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 15px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA; 
+	margin: 0 0 0 5px;
+}
+.pagination span, 
+.pagination a {
+	margin: 0px 5px; 
+}
+.pagination .current { 
+	border-bottom: 2px solid #8fc73e; 
+}
+
+#singlenav{ 
+	margin: 10px 0 0 0;
+	padding: 10px 0 10px 0;
+	border-top: 1px solid #EEE; 
+	overflow: hidden;
+}
+.previousnav{
+	float: left;
+}
+.nextnav{
+	float: right;
+}
+hr.post-shadow { 
+	width: 100%; 
+	min-height: 30px; 
+	margin: 0 0 10px 0; 
+	border: none; 
+	background: url(images/post-shadow.jpg) no-repeat right bottom; 
+}
+.error404 {}
+.error404 .bigfont { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 37px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA; 
+	line-height: 40px; 
+	color: #FF2222; 
+}
+.error404 .widget { 
+	margin: 20px 0 0 0;
+}
+
+#author-info { 
+	margin: 0 0 10px 0; 
+}
+#author-avatar { 
+	float: left; 
+	margin: 0 10px 5px 0; 
+}
+#author-avatar img { 
+	padding: 5px; 
+	border: 1px dashed #DDD;
+}
+#author-link { 
+	color: #333; 
+	font-family: 'Lato',sans-serif; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase;
+}
+	
+/* =============================================================================
+   Comments
+   ========================================================================== */
+#comments { 
+	margin: 20px 0 ;
+}
+#comments ol { 
+	color: #333; 
+}
+#comments ol li {
+	margin: 10px 0 ;
+}
+.comment-author { 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #333;
+}
+.comment-author a { 
+	color: #333; 
+}
+.comment-author a:hover { 
+	color: #8fc73e; 
+}
+.comment-content { 
+	color: #888; 
+}
+.comment-meta { 
+	color: #CCC; 
+}
+ul.children  { 
+	list-style: none; 
+}
+ul.children li { 
+	border-left: 1px solid #E6E6E6; 
+	padding: 5px 5px 5px 10px; 
+}
+	
+#respond {
+	margin: 20px 0; 
+}
+#respond p {}
+#respond label { 
+	margin: 5px 10px 5px 0; 
+	font-family: 'Lato',sans-serif; 
+	font-size: 11px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	color: #AAA;}
+#respond textarea { 
+	border:1px dashed #C3C3C3; 
+}
+#respond  .comment-form-author input[type="text"]{ 
+	margin: 0 0 0 17px;
+}
+#respond  .comment-form-email input[type="text"]{ 
+	margin: 0 0 0 16px;
+}
+#respond  .comment-form-url input[type="text"]{ 
+	margin: 0 0 0 12px;
+}
+	
+/* =============================================================================
+   Attachment image
+   ========================================================================== */
+.attachment-image, .entry-attachment .aligncenter { 
+	text-align: center; 
+}
+.entry-attachment .attachment-attachment-large { 
+	width: 900px; 
+}
+.attachment-thumbnail-bottom { 
+	width: 98%; 
+	margin: 0 auto; 
+	text-align: center;  
+}
+.attachment-thumbnail-bottom img { 
+	width: 80px; 
+	margin: 2.5px 1px; 
+	-webkit-transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.3s ease-in-out; 
+	-o-transition: all 0.3s ease-in-out; 
+	-ms-transition: all 0.3s ease-in-out; 
+	transition: all 0.3s ease-in-out; 
+	opacity: 0.5;  
+}
+.attachment-thumbnail-bottom img:hover { 
+	opacity: 1; 
+}
+.attachment .content-box { 
+	width: 97%;
+}
+	
+/* =============================================================================
+   Sidebar and widget
+   ========================================================================== */
+.widget { }
+.widget ul { 
+	padding: 0; 
+}
+.widget ul li { 
+	color: #aaa; 
+	border-bottom: 1px solid #eee; 
+	padding: 7.5px 0 7.5px 5px; 
+	list-style: none; 
+}
+.widget ul li a { 
+	color: #aaa; 
+}
+.widget ul li a:hover { 
+	color: #8fc73e; 
+}
+	
+.footerarea .widget {}
+.footerarea  .widget ul { 
+	padding: 0 0 0 20px; 
+}
+.footerarea .widget ul li { 
+	color: #EEE; 
+	border: none; 
+	list-style: square; 
+	padding: 2px 0;  
+}
+.footerarea .widget a { 
+	color: #EEE; 
+	border-bottom: 1px dotted #EEE; 
+}
+.footerarea .widget a:hover { 
+	color: #fff; 
+	border-bottom: 1px solid #FFF; 
+}
+
+.widget-title, 
+.eror404 .widgettitle {  
+	font-family: 'Lato',sans-serif; 
+	font-size: 13px; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+	font-weight: 400; 
+	/*background: url(images/dot-border.jpg) repeat-x bottom; */
+	padding: 7.5px 0; 
+	margin: 7.5px 0; 
+	color: #333; 
+	} 
+
+.footerarea .widget_recentpost_widget ul  { 
+	padding: 0;
+} 
+.footerarea .widget_recentpost_widget ul li{
+	list-style:none;
+}
+
+.footerarea .widget-title { 
+	background: none; 
+	border-bottom: 1px dashed #DDD; 
+	padding: 7.5px 0; 
+	color: #FFF;
+} 
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+.footerarea { 
+	background: #000; 
+	color: #fff; 
+	padding: 10px 20px; 
+} 
+
+/* =============================================================================
+   Copyright
+   ========================================================================== */
+.copyrightarea { 
+	margin-top: 10px; 
+	padding: 10px 0 0 0; 
+	border-top:#CCC 1px solid;	
+	color: #499944;  
+}
+.copyrightarea a{
+	color: #DDD; 
+}
+.copyrightarea a:hover { 
+	color: #fff; 
+}
+
+/* ============= Responsive CSS ============= */
+@media only screen and (min-width: 240px) and ( max-width: 768px) {
+
+/* Theme Backbone */
+.row, 
+body, 
+.container { 
+	width: 100%; 
+	min-width: 0; 
+	margin-left: 0px; 
+	margin-right: 0px; 
+	padding-left: 0px; 
+	padding-right: 0px; 
+}
+.row .column-sidebar, 
+.row .column-half, 
+.row .column-full { 
+	width: auto; 
+	float: none; 
+	margin-left: 0px; 
+	margin-right: 0px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+}
+.row .column-content {  
+	width: auto; 
+	float: none; 
+	margin-left: 0px; 
+	margin-right: 0px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+}
+
+/* Searchbox */
+#searchbox { 
+	float: left; 
+}
+
+/* Top Menu */
+#topmenu { 
+	padding: 5px 20px 0 20px; 
+}
+
+/* Footer widget */
+.footerarea { 
+	padding: 10px 0px; 
+}
+}
+
+@media only screen and (min-width: 240px) and ( max-width: 480px) {
+
+#topmenu ul { 
+	display: none 
+}
+#topmenu select { 
+	display: block; 
+	padding: 10px 0; 
+	background: #FFF; 
+	border:none; 
+	font-size: 13px; 
+	color: #333; 
+	font-family: 'Lato',sans-serif; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+} 
+#topmenu option { 
+	border: none;
+}
+}
+/* =============================================================================
+   Help class
+   ========================================================================== */
+.clearfix:before, 
+.clearfix:after { 
+	content: ""; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.clearfix { 
+	*zoom: 1; 
+}
+
+/* =============================================================================
+   Print CSS
+   ========================================================================== */
+@media print {
+* { 
+	background: transparent !important; 
+	box-shadow:none !important; 
+	text-shadow: none !important; 
+	filter:none !important; 
+	-ms-filter: none !important; 
+} 
+a, 
+a:visited { 
+	border-bottom: 1px dotted #000; 
+	padding: 0 0 2px 0;
+}
+abbr[title]:after { 
+	content: " (" attr(title) ")"; 
+}
+.ir a:after, 
+a[href^="javascript:"]:after, 
+a[href^="#"]:after { 
+	content: ""; 
+} 
+pre, 
+blockquote { 
+	border: 1px solid #999; 
+	page-break-inside: avoid; 
+}
+thead { 
+	display: table-header-group; 
+} 
+tr, 
+img { 
+	page-break-inside: avoid; 
+}
+img { 
+	max-width: 100% !important; 
+}
+@page { 
+	margin: 0.5cm; 
+}
+p, 
+h2, 
+h3 { 
+	orphans: 3; 
+	widows: 3; 
+}
+h2, 
+h3 { 
+	page-break-after: avoid; 
+}
+  
+/* Make sense */
+.row, 
+.rowheader, 
+body, 
+.container { 
+	width: 100%; 
+	min-width: 0; 
+	margin-left: 0px; 
+	margin-right: 0px; 
+	padding-left: 0px; 
+	padding-right: 0px; 
+}
+ .row .column-sidebar, 
+ .row .column-half, 
+ .row .column-content, 
+ .row .column-full { 
+	width: 100%; 
+	float: none; 
+	margin-left: 0px; 
+	margin-right: 0px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+}
+
+ /* Hide this */
+#searchbox, .topmenuarea, .sliderarea, .footerarea, .widget, .pagination { 
+	display: none 
+}
+
+/* Edit style */
+.content-box { 
+	border: none;
+}
+.entry-date  { 
+	position: relative; 
+	padding: 0; 
+	margin: 0; 
+	left: 0; 
+	top: 0; 
+	font-family: 'Verdana',sans-serif; 
+	letter-spacing: 0px; 
+	text-transform: capitalize; 
+	font-size: 11px; 
+}
+a[rel=bookmark]:after { 
+	content: " (" attr(href) ")"; 
+}
+a[rel=bookmark] { 
+	border: none; 
+}
+.entry-title { 
+	margin: 10px 0 0 0; 
+	padding: 0;
+}
+.entry-title a { 
+	border: none; 
+	color: #8fc73e;
+}
+.entry-author, 
+.entry-author { 
+	padding: 0;
+} 
+}

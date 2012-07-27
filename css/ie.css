@@ -1,0 +1,7 @@
+/* Education IE conditional CSS */
+label.screen-reader-text { display:none; }
+#searchbox input[type="submit"] {  display: none;}
+hr.post-shadow { display: none }
+.content-box { margin: 0 0 10px 0; }
+#author-avatar { display: none }
+
